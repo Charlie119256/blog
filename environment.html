@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Charles' Blog</title>
+    <link rel="icon" href="images/logo.png" type="image/png">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body {
+            background-color: #f0f2f5;
+            margin: 0;
+        }
+
+        .navbar-brand img {
+            width: 50px;
+            height: 50px;
+            margin-right: 10px;
+        }
+
+        .navbar {
+            background-color: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(5px);
+            font-family: Arial, Helvetica, sans-serif;
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar-toggler {
+            border-color: rgba(0, 0, 0, 0.3);
+        }
+
+        .navbar-nav .nav-link {
+            color: #595959;
+            transition: background-color 0.3s;
+            text-align: center;
+            border: 1px solid transparent;
+            padding: 8px 15px;
+            border-radius: 5px;
+            border-color: #e6e6e6;
+            padding: 2px 2px 2px 2px;
+            font-weight: bold;
+        }
+
+        .navbar-nav {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .navbar-nav .nav-item {
+            margin-right: 15px;
+        }
+
+        .navbar-nav .nav-link:hover {
+            background-color: #e6e6e6;
+            color: #262626;
+        }
+
+        .footer {
+            background-color: #343a40;
+            color: #ffffff;
+            padding: 20px 0;
+        }
+
+
+        .footer ul li a {
+            color: #ffffff;
+            text-decoration: none;
+            /* Removes underline */
+            display: inline-block;
+            /* Ensures the icon and text are on the same line */
+        }
+
+        .footer ul li a:hover {
+            color: #007bff;
+        }
+
+        #environment-cordova {
+            margin-top: 50px;
+        }
+
+        .envi {
+            border: 1px solid #b3b3b3;
+        }
+
+        #title {
+            border: 1px solid #d9d9d9;
+        }
+
+        .col-md-6 {
+            margin-top: 50px;
+        }
+
+        /*Slideshow*/
+
+        img {
+            vertical-align: middle;
+        }
+
+        /* Position the image container (needed to position the left and right arrows) */
+        .slideshow-container {
+            position: relative;
+        }
+
+        /* Hide the images by default */
+        .mySlides {
+            display: none;
+        }
+
+        /* Add a pointer when hovering over the thumbnail images */
+        .cursor {
+            cursor: pointer;
+        }
+
+        /* Next & previous buttons */
+        .prev,
+        .next {
+            cursor: pointer;
+            position: absolute;
+            top: 40%;
+            width: auto;
+            padding: 16px;
+            margin-top: -50px;
+            color: white;
+            font-weight: bold;
+            font-size: 20px;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+            -webkit-user-select: none;
+        }
+
+        /* Position the "next button" to the right */
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+
+        /* On hover, add a black background color with a little bit see-through */
+        .prev:hover,
+        .next:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        /* Number text (1/3 etc) */
+        .numbertext {
+            color: #222;
+            font-size: 12px;
+            padding: 8px 12px;
+            position: absolute;
+            top: 0;
+        }
+
+        /* Container for image text */
+        .caption-container {
+            text-align: center;
+            background-color: #222;
+            padding: 2px 16px;
+            color: white;
+        }
+
+        .row-row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /* Six columns side by side */
+        .column {
+            float: left;
+            width: 7%;
+        }
+
+        /* Add a transparency effect for thumnbail images */
+        .demo {
+            opacity: 0.6;
+        }
+
+        .active,
+        .demo:hover {
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+        <a class="navbar-brand" href="index.html"><img src="images/logo.png" alt="Website Logo"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"> <a class="nav-link" href="index.html">Home</a> </li>
+                <li class="nav-item"> <a class="nav-link" href="index.html">About</a> </li>
+                <li class="nav-item"> <a class="nav-link" href="#footer">Contact</a> </li>
+                <li class="nav-item"> <a class="nav-link" href="#environment">Environment</a> </li>
+            </ul>
+        </div>
+    </nav>
+    <section id="environment-cordova">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h2>Environment of Cordova, Cebu</h2>
+                    <p>Ang Cordova gilukop sa tubig dagat maong dato kini sa marine life. Daghang kahoy ang mabuhi kay
+                        adunay yuta nga dato sa nagkalalaing kinahanglan sa usa ka tanom o kahoy. Makita ang mga
+                        nagkalaing-laing mga mananap lakip na kini ang Langgam, isda ug uban pa.
+                        Ang Cordova mipadayun sa pagprotekta sa kinaiyahan nga adunay dato nga ecosystem.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <hr class="envi">
+    <section id="environment">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h2 style="text-align:center">Day-as Mangroves Gallery</h2>
+                    <div class="slideshow-container" id="slideshow1">
+                        <div class="mySlides">
+                            <div class="numbertext">1 / 6</div>
+                            <img src="images/bakhaw.jpg" style="width:100%">
+                        </div>
+                        <div class="mySlides">
+                            <div class="numbertext">2 / 6</div>
+                            <img src="images/bakhaw1.jpg" style="width:100%">
+                        </div>
+                        <div class="mySlides">
+                            <div class="numbertext">3 / 6</div>
+                            <img src="images/bakhaw2.jpg" style="width:100%">
+                        </div>
+                        <div class="mySlides">
+                            <div class="numbertext">4 / 6</div>
+                            <img src="images/bakhaw3.jpg" style="width:100%">
+                        </div>
+                        <div class="mySlides">
+                            <div class="numbertext">5 / 6</div>
+                            <img src="images/bakhaw4.jpg" style="width:100%">
+                        </div>
+                        <div class="mySlides">
+                            <div class="numbertext">6 / 6</div>
+                            <img src="images/bakhaw5.jpg" style="width:100%">
+                        </div>
+                        <a class="prev" onclick="plusSlides(-1, 'slideshow1')">❮</a>
+                        <a class="next" onclick="plusSlides(1, 'slideshow1')">❯</a>
+
+                        <div class="caption-container">
+                            <p id="caption"></p>
+                        </div>
+
+                        <div class="row-row">
+                            <div class="column">
+                                <img class="demo cursor" src="images/bakhaw.jpg" style="width:100%"
+                                    onclick="currentSlide(1)" alt="Cordova Balay-Lungsod">
+                            </div>
+                            <div class="column">
+                                <img class="demo cursor" src="images/bakhaw1.jpg" style="width:100%"
+                                    onclick="currentSlide(2)" alt="Cordova Museum">
+                            </div>
+                            <div class="column">
+                                <img class="demo cursor" src="images/bakhaw2.jpg" style="width:100%"
+                                    onclick="currentSlide(3)" alt="10,000 Roses">
+                            </div>
+                            <div class="column">
+                                <img class="demo cursor" src="images/bakhaw3.jpg" style="width:100%"
+                                    onclick="currentSlide(4)" alt="Cordova Balay-Lungsod">
+                            </div>
+                            <div class="column">
+                                <img class="demo cursor" src="images/bakhaw4.jpg" style="width:100%"
+                                    onclick="currentSlide(5)" alt="Cordova Museum">
+                            </div>
+                            <div class="column">
+                                <img class="demo cursor" src="images/bakhaw5.jpg" style="width:100%"
+                                    onclick="currentSlide(6)" alt="10,000 Roses">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <h2>Pagpanalipud sa Kabakhawan sa Day-as</h2>
+                    <p>Orb! Mga bakawan maoy hinungdanon nga bahin sa ekosistema sa Day-as, Cordova. Naghatag sila og
+                        puy-anan alang sa lain-laing kinaiya sa kinaiya, lakip ang isda, kasag, ug hipon. Makatabang
+                        usab sila sa pagpanalipod sa baybayon gikan sa pagka-erode ug sa mga kusog nga dag-om. Dinhi sa
+                        post, atong tambayan ang kahinungdanon sa mga bakawan sa Day-as, Cordova..</p>
+                    <p>Ang mga bakhawan mga kahoy nga mo-ugmad sa tubig-dagat. Makit-an sila sa mga tropikal ug
+                        subtropikal nga dapit sa kalibutan. Sa Day-as, Cordova, importante kaayo ang mga bakhawan sa
+                        ekosistema. Naghatag sila og puy-anan alang sa lain-laing kinaiya sa kinaiya, lakip ang isda,
+                        kasag, ug hipon. Makatabang usab sila sa pagpanalipod sa baybayon gikan sa pagka-erode ug sa mga
+                        kusog nga storm surges.</p>
+                    <p>Ang mga bakawan usa ka hinungdanon nga bahin sa ekosistema sa Day-as, Cordova. Naghatag sila og
+                        puy-anan alang sa lain-laing kinaiya sa kinaiya, lakip ang isda, kasag, ug hipon. Makatabang
+                        usab sila sa pagpanalipod sa baybayon gikan sa pagka-erode ug sa mga kusog nga dag-om.
+                        Importante nga magbuhat kita og mga lakang aron panalipdan kining mga hinungdanon nga ekosistema
+                        aron makapadayon sila sa paghatag og mga hinungdanon nga serbisyo alang sa sunod-sunod nga mga
+                        kaliwatan.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <h2 style="text-align:center">Trees of Gabi Gallery</h2>
+                    <div class="slideshow-container" id="slideshow2">
+                        <div class="mySlides">
+                            <div class="numbertext">1 / 4</div>
+                            <img src="images/gabi.jpg" style="width:100%">
+                        </div>
+                        <div class="mySlides">
+                            <div class="numbertext">2 / 4</div>
+                            <img src="images/gabi1.jpg" style="width:100%">
+                        </div>
+                        <div class="mySlides">
+                            <div class="numbertext">3 / 4</div>
+                            <img src="images/gabi2.jpg" style="width:100%">
+                        </div>
+                        <div class="mySlides">
+                            <div class="numbertext">4 / 4</div>
+                            <img src="images/gabi3.jpg" style="width:100%">
+                        </div>
+                        <a class="prev" onclick="plusSlides(-1, 'slideshow2')">❮</a>
+                        <a class="next" onclick="plusSlides(1, 'slideshow2')">❯</a>
+
+                        <div class="caption-container">
+                            <p id="caption"></p>
+                        </div>
+
+                        <div class="row-row">
+                            <div class="column">
+                                <img class="demo cursor" src="images/gabi.jpg" style="width:100%"
+                                    onclick="currentSlide(1)" alt="">
+                            </div>
+                            <div class="column">
+                                <img class="demo cursor" src="images/gabi1.jpg" style="width:100%"
+                                    onclick="currentSlide(2)" alt="">
+                            </div>
+                            <div class="column">
+                                <img class="demo cursor" src="images/gabi2.jpg" style="width:100%"
+                                    onclick="currentSlide(3)" alt="">
+                            </div>
+                            <div class="column">
+                                <img class="demo cursor" src="images/gabi3.jpg" style="width:100%"
+                                    onclick="currentSlide(4)" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <h2>Kaimportante sas Kahoy sa Gabi</h2>
+                    <p>Orb! Mga kahoy usa ka batakang bahin sa kinaiyahan sa Gabi, Cordova. Sila nagahatag og panimalay
+                        alang sa daghang kaulohan sa kinaiya sama sa mga langgam, insekto, ug mamalya. Makatabang usab
+                        sila sa paglimpyo sa hangin, pagpugong sa pagka-erode sa yuta, ug paghatag og silhig. Sa atong
+                        post, atong usbon ang kahinungdanon sa mga kahoy sa Gabi, Cordova.</p>
+                    <p>Mga kahoy usa ka importante nga bahin sa ekosistema sa Gabi, Cordova. Sila nagahatag og panimalay
+                        alang sa daghang kaulohan sa kinaiya sama sa mga langgam, insekto, ug mamalya. Makatabang usab
+                        sila sa paglimpyo sa hangin pinaagi sa pagtunol sa carbon dioxide ug uban pang polusyon. Ang mga
+                        kahoy usab makatabang sa pagpugong sa pagka-erode sa yuta pinaagi sa pag-angkon sa yuta pinaagi
+                        sa ilang mga gamut. Sila usab nagahatag og silhig nga makatabang sa pagpugong sa kainit sa
+                        lugar.</p>
+                    <p>Ang mga kahoy usa ka hinungdanon nga bahin sa kinaiyahan sa Gabi, Cordova. Sila nagahatag og
+                        panimalay alang sa lain-laing kaulohan sa kinaiya, naglimpyo sa hangin, nagpugong sa pagka-erode
+                        sa yuta, ug nagahatag og silhig. Importante nga magbuhat kita og mga lakang aron panalipdan
+                        kining mga hinungdanon nga ekosistema aron makapadayon sila sa paghatag og mga hinungdanon nga
+                        serbisyo alang sa sunod-sunod nga mga kaliwatan.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <h2 style="text-align:center">Cordova Roads Gallery</h2>
+                    <div class="slideshow-container" id="slideshow3">
+                        <div class="mySlides">
+                            <div class="numbertext">1 / 3</div>
+                            <img src="images/road.jpg" style="width:100%">
+                        </div>
+                        <div class="mySlides">
+                            <div class="numbertext">2 / 3</div>
+                            <img src="images/road1.jpg" style="width:100%">
+                        </div>
+                        <div class="mySlides">
+                            <div class="numbertext">3 / 3</div>
+                            <img src="images/road2.jpg" style="width:100%">
+                        </div>
+                        <a class="prev" onclick="plusSlides(-1, 'slideshow3')">❮</a>
+                        <a class="next" onclick="plusSlides(1, 'slideshow3')">❯</a>
+
+                        <div class="caption-container">
+                            <p id="caption"></p>
+                        </div>
+
+                        <div class="row-row">
+                            <div class="column">
+                                <img class="demo cursor" src="images/road.jpg" style="width:100%"
+                                    onclick="currentSlide(1)" alt="Cordova Balay-Lungsod">
+                            </div>
+                            <div class="column">
+                                <img class="demo cursor" src="images/road1.jpg" style="width:100%"
+                                    onclick="currentSlide(2)" alt="Cordova Museum">
+                            </div>
+                            <div class="column">
+                                <img class="demo cursor" src="images/road2.jpg" style="width:100%"
+                                    onclick="currentSlide(3)" alt="10,000 Roses">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <h2>Maayong pagbalansi sa kadalanan ug kinaiyahan sa Cordova</h2>
+                    <p>Orb! Ang mga kadalanan sa Cordova nga una nagalabay sa natural nga palibot, karon anaa sa
+                        tunga-tunga
+                        sa aktibong kinaiyahan sa siyudad, usa ka hagit ngadto sa mga mahinayong ekosistema sa lugar.
+                        Apan, bisan sa kining transformasyon, ang Cordova nagapangandam sa pagsiguro sa pag-amoma sa
+                        kaibabawan niini. Ang mga tinabangay nga paningkamot sa lokal nga mga awtoridad ug mga grupo sa
+                        konservasyon nagtinguha sa pagsagad sa balanseng pag-uswag ug kinaiya.</p>
+                    <p>Ang kadalanan mismo nagakauswag, nagtanyag og mga eco-friendly nga pamaagi sama sa mga green
+                        corridors ug sustainable nga mga karsada. Kining mga bag-ong hinimuan nagtinguha sa pag-ubos sa
+                        ekolohikal nga epekto sa pag-uswag. Ang pagtampo sa publikong transportasyon ug mga espasyo
+                        alang sa siklista nakatabang usab sa pagpugong sa carbon emissions, nagpadayon sa paghiusa sa
+                        pag-uswag ug kahimsog sa kinaiyahan.</p>
+                    <p>Bisan sa mga hagit nga gipadala sa paspas nga pagsaka sa siyudad, ang Cordova nagapabilin nga
+                        matinud-anon sa iyang pagsompromiso sa kahimsog sa kinaiyahan. Ang pagsagad og balanseng
+                        pag-uswag ug pag-amoma sa kinaiyahan nagpakita sa hangyo sa komunidad. Pinaagi sa mga
+                        tinabangayang paningkamot, ang Cordova nagtukod og dalan diin ang kalamboan maghiusa'g
+                        magpadayon nga hinayhay sa kinaiyahan, nagpakita nga ang pag-uswag ug ang responsibilidad sa
+                        kinaiyahan mahimo'g maghiusa, nag-atiman og usa ka mamahimong komunidad nga may kaayohan nga
+                        nahisakop sa usa ka malig-on nga kinaiyahan.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <h2 style="text-align:center">Sea of Buagsong Gallery</h2>
+                    <div class="slideshow-container" id="slideshow4">
+                        <div class="mySlides">
+                            <div class="numbertext">1 / 7</div>
+                            <img src="images/sea.jpg" style="width:100%">
+                        </div>
+                        <div class="mySlides">
+                            <div class="numbertext">2 / 7</div>
+                            <img src="images/sea1.jpg" style="width:100%">
+                        </div>
+                        <div class="mySlides">
+                            <div class="numbertext">3 / 7</div>
+                            <img src="images/sea2.jpg" style="width:100%">
+                        </div>
+                        <div class="mySlides">
+                            <div class="numbertext">4 / 7</div>
+                            <img src="images/sea3.jpg" style="width:100%">
+                        </div>
+                        <div class="mySlides">
+                            <div class="numbertext">5 / 7</div>
+                            <img src="images/sea4.jpg" style="width:100%">
+                        </div>
+                        <div class="mySlides">
+                            <div class="numbertext">6 / 7</div>
+                            <img src="images/sea5.jpg" style="width:100%">
+                        </div>
+                        <div class="mySlides">
+                            <div class="numbertext">7 / 7</div>
+                            <img src="images/sea6.jpg" style="width:100%">
+                        </div>
+                        <a class="prev" onclick="plusSlides(-1, 'slideshow4')">❮</a>
+                        <a class="next" onclick="plusSlides(1, 'slideshow4')">❯</a>
+
+                        <div class="caption-container">
+                            <p id="caption"></p>
+                        </div>
+
+                        <div class="row-row">
+                            <div class="column">
+                                <img class="demo cursor" src="images/sea.jpg" style="width:100%"
+                                    onclick="currentSlide(1)" alt="">
+                            </div>
+                            <div class="column">
+                                <img class="demo cursor" src="images/sea1.jpg" style="width:100%"
+                                    onclick="currentSlide(2)" alt="">
+                            </div>
+                            <div class="column">
+                                <img class="demo cursor" src="images/sea2.jpg" style="width:100%"
+                                    onclick="currentSlide(3)" alt="">
+                            </div>
+                            <div class="column">
+                                <img class="demo cursor" src="images/sea3.jpg" style="width:100%"
+                                    onclick="currentSlide(4)" alt="">
+                            </div>
+                            <div class="column">
+                                <img class="demo cursor" src="images/sea4.jpg" style="width:100%"
+                                    onclick="currentSlide(5)" alt="">
+                            </div>
+                            <div class="column">
+                                <img class="demo cursor" src="images/sea5.jpg" style="width:100%"
+                                    onclick="currentSlide(6)" alt="">
+                            </div>
+                            <div class="column">
+                                <img class="demo cursor" src="images/sea6.jpg" style="width:100%"
+                                    onclick="currentSlide(7)" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <h2>Dato nga dagat sa Buagsong</h2>
+                    <p>Orb! Ang Buagsong, usa ka gamay apan ngilngi nga barangay sa Cordova, Cebu, gitanyag sa iyang
+                        lami nga mga pagkaon gikan sa dagat ug walay sulab nga baybayon. Ang ilang kadagatan puno og
+                        lain-laing klase sa kinaiya sa kinaiya nga kinaiya, gikan sa makulay nga mga isda ngadto sa
+                        bugnaw nga mga coral reef ug lusay.</p>
+                    <p>Daghan kaayo og mananagat ang buagsong, daghan mao kini ang pangita. Mao kini ilang panginabuhian
+                        sukad pa kaniadto. Dato ang dagat dinhi daghan ang makuha. Busa kinahanglan natong ampingan ang
+                        kinaiyahan.</p>
+                    <p>Ang Buagsong sa Cordova, Cebu, usa ka dato nga lugar nga nagpasikat sa usa ka mauswagon nga
+                        kinaiya sa kinaiya. Ang lokal nga gobyerno ug mga residente may hugot nga kompromiso sa
+                        pagpanalipod sa kinaiyahan, siguraduhon ang padayong kahimsog ug kahalangdon sa kinabuhi sa
+                        kadagatan sa dapit.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <br>
+
+    <footer class="footer" id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>Follow Us</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="https://www.facebook.com/charles.villena.18"><i class="fab fa-facebook-f"></i>
+                                Facebook</a></li>
+                        <li><a href="https://www.instagram.com/villena_charles_/"><i class="fab fa-twitter"></i>
+                                Twitter</a></li>
+                        <li><a href="https://twitter.com/VILLENACHARLES1"><i class="fab fa-instagram"></i> Instagram</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Contact</h5>
+                    <p>Email: villenacharles552.com</p>
+                    <p>Phone: +1234567890</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Address</h5>
+                    <p>Matab-ang Day-as</p>
+                    <p>Cordova, Cebu, Philippines</p>
+                    <!-- Embedded Map -->
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d981.5242851218419!2d123.94208559999998!3d10.253749000000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sph!4v1702544997818!5m2!1sen!2sph"
+                        width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        let slideIndex = 1;
+
+        function plusSlides(n, slideshowId) {
+            showSlides(slideIndex += n, slideshowId);
+        }
+
+        function currentSlide(n, slideshowId) {
+            showSlides(slideIndex = n, slideshowId);
+        }
+
+        function showSlides(n, slideshowId) {
+            let i;
+            let slides = document.getElementById(slideshowId).getElementsByClassName("mySlides");
+            let dots = document.getElementById(slideshowId).getElementsByClassName("demo");
+
+            if (n > slides.length) { slideIndex = 1; }
+            if (n < 1) { slideIndex = slides.length; }
+
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+        }
+
+        // Initialize the slideshow
+        showSlides(slideIndex, 'slideshow1');
+        showSlides(slideIndex, 'slideshow2');
+        showSlides(slideIndex, 'slideshow3'); // Fixed typo here
+        showSlides(slideIndex, 'slideshow4'); // Fixed typo here
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+
+</html>

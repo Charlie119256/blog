@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Charles' Blog</title>
+    <link rel="icon" href="images/logo.png" type="image/png">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body {
+            background-color: #f0f2f5;
+            margin: 0;
+        }
+
+        .navbar-brand img {
+            width: 50px;
+            height: 50px;
+            margin-right: 10px;
+        }
+
+        .navbar {
+            background-color: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(5px);
+            font-family: Arial, Helvetica, sans-serif;
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar-toggler {
+            border-color: rgba(0, 0, 0, 0.3);
+        }
+
+        .navbar-nav .nav-link {
+            color: #595959;
+            transition: background-color 0.3s;
+            text-align: center;
+            border: 1px solid transparent;
+            padding: 8px 15px;
+            border-radius: 5px;
+            border-color: #e6e6e6;
+            padding: 2px 2px 2px 2px;
+            font-weight: bold;
+        }
+
+        .navbar-nav {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .navbar-nav .nav-item {
+            margin-right: 15px;
+        }
+
+        .navbar-nav .nav-link:hover {
+            background-color: #e6e6e6;
+            color: #262626;
+        }
+
+        .footer {
+            background-color: #343a40;
+            color: #ffffff;
+            padding: 20px 0;
+        }
+
+
+        .footer ul li a {
+            color: #ffffff;
+            text-decoration: none;
+            /* Removes underline */
+            display: inline-block;
+            /* Ensures the icon and text are on the same line */
+        }
+
+        .footer ul li a:hover {
+            color: #007bff;
+        }
+
+        #history-cordova {
+            margin-top: 50px;
+        }
+
+        .history {
+            border: 1px solid #b3b3b3;
+        }
+
+        #title {
+            border: 1px solid #d9d9d9;
+        }
+
+        .col-md-6 {
+            margin-top: 50px;
+        }
+
+        /*Slideshow*/
+
+        img {
+            vertical-align: middle;
+        }
+
+        /* Position the image container (needed to position the left and right arrows) */
+        .slideshow-container {
+            position: relative;
+        }
+
+        /* Hide the images by default */
+        .mySlides {
+            display: none;
+        }
+
+        /* Add a pointer when hovering over the thumbnail images */
+        .cursor {
+            cursor: pointer;
+        }
+
+        /* Next & previous buttons */
+        .prev,
+        .next {
+            cursor: pointer;
+            position: absolute;
+            top: 40%;
+            width: auto;
+            padding: 16px;
+            margin-top: -50px;
+            color: white;
+            font-weight: bold;
+            font-size: 20px;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+            -webkit-user-select: none;
+        }
+
+        /* Position the "next button" to the right */
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+
+        /* On hover, add a black background color with a little bit see-through */
+        .prev:hover,
+        .next:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        /* Number text (1/3 etc) */
+        .numbertext {
+            color: #222;
+            font-size: 12px;
+            padding: 8px 12px;
+            position: absolute;
+            top: 0;
+        }
+
+        /* Container for image text */
+        .caption-container {
+            text-align: center;
+            background-color: #222;
+            padding: 2px 16px;
+            color: white;
+        }
+
+        .row-row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /* Six columns side by side */
+        .column {
+            float: left;
+            width: 7%;
+        }
+
+        /* Add a transparency effect for thumnbail images */
+        .demo {
+            opacity: 0.6;
+        }
+
+        .active,
+        .demo:hover {
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+        <a class="navbar-brand" href="index.html"><img src="images/logo.png" alt="Website Logo"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"> <a class="nav-link" href="index.html">Home</a> </li>
+                <li class="nav-item"> <a class="nav-link" href="index.html">About</a> </li>
+                <li class="nav-item"> <a class="nav-link" href="#footer">Contact</a> </li>
+                <li class="nav-item"> <a class="nav-link" href="#history">History</a> </li>
+            </ul>
+        </div>
+    </nav>
+    <section id="history-cordova">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h2>History of Cordova, Cebu</h2>
+                    <p>Ang Cordova usa ka malampuson nga dapit sa Cebu. Daghan na kini og naaigan nga pagsulay apan sa
+                        katapusan niasenso kini. Ang lungsod nga gitawag sa kasingkasing sa Pilipinas usa ka himan sa
+                        mga istorya, ug diin ang kultura, kasaysayan, ug kadaugan naghiusa sa usa ka makalilisang nga
+                        hubad sa panahon. Sa sulod sa mga kanto ug dalan, ang Cordova nagtakod og pundasyon sa mga
+                        istoryang nagmugna og mga kahayag sa iyang kadasig sa kalamboan. Hajom ta sa usa ka paglantaw
+                        ngadto sa maanindot ug makalilisang nga kasaysayan sa Cordova, Cebu.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <hr class="history">
+    <section id="history">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h2 style="text-align:center">San Roque Parish Church Gallery</h2>
+                    <div class="slideshow-container" id="slideshow1">
+                        <div class="mySlides">
+                            <div class="numbertext">1 / 3</div>
+                            <img src="images/church.jpg" style="width:100%">
+                        </div>
+                        <div class="mySlides">
+                            <div class="numbertext">2 / 3</div>
+                            <img src="images/church1.jpg" style="width:100%">
+                        </div>
+                        <div class="mySlides">
+                            <div class="numbertext">3 / 3</div>
+                            <img src="images/church2.jpg" style="width:100%">
+                        </div>
+                        <a class="prev" onclick="plusSlides(-1, 'slideshow1')">❮</a>
+                        <a class="next" onclick="plusSlides(1, 'slideshow1')">❯</a>
+
+                        <div class="caption-container">
+                            <p id="caption"></p>
+                        </div>
+
+                        <div class="row-row">
+                            <div class="column">
+                                <img class="demo cursor" src="images/church.jpg" style="width:100%"
+                                    onclick="currentSlide(1)" alt="">
+                            </div>
+                            <div class="column">
+                                <img class="demo cursor" src="images/church1.jpg" style="width:100%"
+                                    onclick="currentSlide(2)" alt="">
+                            </div>
+                            <div class="column">
+                                <img class="demo cursor" src="images/church2.jpg" style="width:100%"
+                                    onclick="currentSlide(3)" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <h2>Ginikanan Sa San Roque Parish Church Cordova</h2>
+                    <p>Orb! Ang San Roque Parish Church usa ka simbahan sa Simbahang Katoliko Romano nga nahimutang sa
+                        lungsodnon sa Cordova, Cebu. Itomoy nga gipahimutang isip usa ka parokya niadtong Oktubre 8,
+                        1864, diin ang Orden sa mga Augustinian Recollects mihatag og pagdumala sa parokya sa
+                        sinugdanan. Ang inahan nga parokya sa simbahan mao ang simbahan sa Opon (karon nga Lapu-Lapu
+                        City).</p>
+                    <p>Ang simbahan gihimo gikan sa tabique pampango, nipa, ug mga bato nga coral niadtong 1864. Ang
+                        konstruksyon sa bato nga simbahan nag-ugat atol sa termino ni Fr. Lucas Incon, usa ka paring
+                        sekular, nga nagsilbi taliwala sa tuig 1924 ug 1933. Ang mga pag-rehabilitar nga gihimo sa
+                        kasaysayan sa Simbahan sa Cordova nagpadayon nga nagdala og daghang bahin nga kontemporaryo sa
+                        istilo. Naghugpong kini sa arkitekturang Moorish ug Gothic nga mga elemento.</p>
+                    <p>Sa una, ang Cordova mao ang resulta sa paghugpong sa mga dapit sa Gabi, Day-as, ug Pilipog nga
+                        gigubot pagkasama-sama isip usa ka hurisdiksyon nga lain gikan sa Opon. Ang iyang ngalan gikan
+                        sa Cordoba, usa ka siudad nga Moorish sa Espanya. Apan sa tuig 1898, gi-dugang kini sa Opon
+                        tungod sa usa ka di-mahinungdanong paningkamot sa pagpaandam sa bag-ong lungsod nga molupyo sa
+                        kaugalingong pamaagi. Usa ka dekada human, mi-awhag kini sa pag-secede nga gipadayon sa
+                        Philippine Assembly. Si Bernardo Nuñez, nga ang iyang ngalan gisaulog pinaagi sa usa ka karsada
+                        nga gi-ngalan kaniya, gipili isip presidente sa lungsod sa usa ka inagurahan nga miting nga
+                        gipuy-an ni Speaker Sergio Osmeña, Sr., Governor Manuel Roa, ug mga opisyal gikan sa Opon.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <h2 style="text-align:center">Cordova Public College Gallery</h2>
+                    <div class="slideshow-container" id="slideshow2">
+                        <div class="mySlides">
+                            <div class="numbertext">1 / 4</div>
+                            <img src="images/cpc.jpg" style="width:100%">
+                        </div>
+                        <div class="mySlides">
+                            <div class="numbertext">2 / 4</div>
+                            <img src="images/cpc1.jpg" style="width:100%">
+                        </div>
+                        <div class="mySlides">
+                            <div class="numbertext">3 / 4</div>
+                            <img src="images/cpc2.jpg" style="width:100%">
+                        </div>
+                        <div class="mySlides">
+                            <div class="numbertext">4 / 4</div>
+                            <img src="images/cpc3.jpg" style="width:100%">
+                        </div>
+                        <a class="prev" onclick="plusSlides(-1, 'slideshow2')">❮</a>
+                        <a class="next" onclick="plusSlides(1, 'slideshow2')">❯</a>
+
+                        <div class="caption-container">
+                            <p id="caption"></p>
+                        </div>
+
+                        <div class="row-row">
+                            <div class="column">
+                                <img class="demo cursor" src="images/cpc.jpg" style="width:100%"
+                                    onclick="currentSlide(1)" alt="">
+                            </div>
+                            <div class="column">
+                                <img class="demo cursor" src="images/cpc1.jpg" style="width:100%"
+                                    onclick="currentSlide(2)" alt="">
+                            </div>
+                            <div class="column">
+                                <img class="demo cursor" src="images/cpc2.jpg" style="width:100%"
+                                    onclick="currentSlide(3)" alt="">
+                            </div>
+                            <div class="column">
+                                <img class="demo cursor" src="images/cpc3.jpg" style="width:100%"
+                                    onclick="currentSlide(3)" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <h2>Asenso Cordova Public College</h2>
+                    <p>Orb! Ang Cordova Public College, na nahimutang sa Cordova, Cebu, nagpadayon sa pagpapakita sa
+                        kakugi,
+                        kalaay ug labaw sa tanan, ang di matinud-anon nga pagpangita sa edukasyon. Ang ilang pagbag-o
+                        gikan sa gamay nga simbahan ngadto sa usa ka gitudloan nga pundok sa edukasyon nagpakita sa usa
+                        ka kasaysayan nga puno sa paglambo ug determinasyon.</p>
+                    <h6>Usa ka Simpleng Pagsugod</h6>
+                    <p>Sa istorya sa edukasyon sa Cordova, ang Cordova Public College mibutho niadtong 2005 pinaagi sa
+                        Municipal Ordinance Number 2001 Series sa tuig 2015. Bisan sa kakulang sa pisikal nga mga silid
+                        sa una, ang kolehiyo nagtumong sa pagtanyag sa adunang, dekalidad nga edukasyon, gipasagdan ang
+                        mga kahilayan sa imprastruktura.</p>
+                    <h6>Paglakbay sa Pagsulong</h6>
+                    <p> Bisan sa mga una nga mga kalisdanan, gipadayon sa Cordova Public College ang pag-uswag,
+                        hinay-hinay nga nagpalapad sa ilang mga akademikong programa ug mga serbisyo alang sa mga
+                        estudyante. Ang ilang kalamboan misulod gawas sa mga pisikal nga istraktura, nagtanyag og
+                        mahinungdanong kahigayunan alang sa mga estudyante nga nagpangita og mas taas nga edukasyon.
+                    </p>
+                    <h6>Pagabli sa mga Kahigayunan </h6>
+                    <p> Gipasundan sa usa ka komitmento ngadto sa kinaiyahan nga edukasyon, gitanggap sa Cordova Public
+                        College ang Universal Access to Quality Tertiary Education Act, Republic Act No. 10931. Kini
+                        nagtugot sa pag-waive sa bayad, nagpasubsob sa kahigayonan sa edukasyon alang sa komunidad.</p>
+                    <h6>Lamdag nga Alang sa mga Akademikong Sulogoon</h6>
+                    <p>
+                        Sa pagpalapad sa ilang akademikong portfolio, gipamugna sa kolehiyo ang lain-laing programa,
+                        nagtanyag og Bachelor of Science in Education (BSED) sa Siyensya ug Ingles, lakip na ang mga
+                        kurso sa Hotel Management (BSHM), Elementary Education (BEED), ug Information Technology (BSIT),
+                        nga nagtabang sa mga interes sa kahimtang sa trabaho.</p>
+                    <h6>Usa ka Tradisyon sa Kalampusan</h6>
+                    <p> Karon, ang Cordova Public College nagtindog ingon sa usa ka rehiyonal nga pundok sa edukasyon,
+                        nailhan sa iyang kalamboan sa akademikos ug dedikasyon sa komunidad. Kini naging institusyon nga
+                        nagapadako sa mga pangandoy, nagtanom og kultura sa pagkat-on ug pag-uswag.</p>
+                    <h6>Paglantaw sa Kaugmaon</h6>
+                    <p>
+                        Pinaagi sa pagpadayon sa ilang paglakbay, ang Cordova Public College nagpabilin nga komitado sa
+                        pagtanyag og kalidad, barato nga edukasyon. Nakabase sa usa ka kasaysayan sa kakugi ug pag-usab,
+                        ang kolehiyo nagapaabante sa kaugmaon samtang nagatuman sa ilang misyon sa pagpananom sa sunod
+                        nga henerasyon sa mga lider.
+
+                        Ang Cordova Public College nagpadayon sa kahigayonan sa pag-usab sa edukasyon—usa ka patik sa
+                        unsaon nga ang kasaysayan nagahimo sa kasamtangang panahon ug nagapatindog sa pundasyon alang sa
+                        usa ka malaumon nga kaugmaon.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <br>
+
+    <footer class="footer" id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>Follow Us</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="https://www.facebook.com/charles.villena.18"><i class="fab fa-facebook-f"></i>
+                                Facebook</a></li>
+                        <li><a href="https://www.instagram.com/villena_charles_/"><i class="fab fa-twitter"></i>
+                                Twitter</a></li>
+                        <li><a href="https://twitter.com/VILLENACHARLES1"><i class="fab fa-instagram"></i> Instagram</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Contact</h5>
+                    <p>Email: villenacharles552.com</p>
+                    <p>Phone: +1234567890</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Address</h5>
+                    <p>Matab-ang Day-as</p>
+                    <p>Cordova, Cebu, Philippines</p>
+                    <!-- Embedded Map -->
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d981.5242851218419!2d123.94208559999998!3d10.253749000000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sph!4v1702544997818!5m2!1sen!2sph"
+                        width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        let slideIndex = 1;
+
+        function plusSlides(n, slideshowId) {
+            showSlides(slideIndex += n, slideshowId);
+        }
+
+        function currentSlide(n, slideshowId) {
+            showSlides(slideIndex = n, slideshowId);
+        }
+
+        function showSlides(n, slideshowId) {
+            let i;
+            let slides = document.getElementById(slideshowId).getElementsByClassName("mySlides");
+            let dots = document.getElementById(slideshowId).getElementsByClassName("demo");
+
+            if (n > slides.length) { slideIndex = 1; }
+            if (n < 1) { slideIndex = slides.length; }
+
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+        }
+
+        // Initialize the slideshow
+        showSlides(slideIndex, 'slideshow1');
+        showSlides(slideIndex, 'slideshow2');
+        showSlides(slideIndex, 'slideshow3'); // Fixed typo here
+        showSlides(slideIndex, 'slideshow4'); // Fixed typo here
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+
+</html>

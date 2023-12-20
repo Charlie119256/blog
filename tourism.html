@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Charles' Blog</title>
+    <link rel="icon" href="images/logo.png" type="image/png">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body {
+            background-color: #f0f2f5;
+            margin: 0;
+        }
+
+        .navbar {
+            background-color: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(5px);
+            font-family: Arial, Helvetica, sans-serif;
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar-toggler {
+            border-color: rgba(0, 0, 0, 0.3);
+        }
+
+        .navbar-nav .nav-link {
+            color: #595959;
+            transition: background-color 0.3s;
+            text-align: center;
+            border: 1px solid transparent;
+            padding: 8px 15px;
+            border-radius: 5px;
+            border-color: #e6e6e6;
+            padding: 2px 2px 2px 2px;
+            font-weight: bold;
+        }
+
+        .navbar-nav {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .navbar-nav .nav-item {
+            margin-right: 15px;
+        }
+
+        .navbar-nav .nav-link:hover {
+            background-color: #e6e6e6;
+            color: #262626;
+        }
+
+        .footer {
+            background-color: #343a40;
+            color: #ffffff;
+            padding: 20px 0;
+        }
+
+
+        .footer ul li a {
+            color: #ffffff;
+            text-decoration: none;
+            /* Removes underline */
+            display: inline-block;
+            /* Ensures the icon and text are on the same line */
+        }
+
+        .footer ul li a:hover {
+            color: #007bff;
+        }
+
+        #tourism-cordova {
+            margin-top: 50px;
+        }
+
+        .tour {
+            border: 1px solid #b3b3b3;
+        }
+
+        #title {
+            border: 1px solid #d9d9d9;
+        }
+
+        .col-md-6 {
+            margin-top: 50px;
+        }
+
+
+        /*Slideshow*/
+
+        img {
+            vertical-align: middle;
+        }
+
+        /* Position the image container (needed to position the left and right arrows) */
+        .slideshow-container {
+            position: relative;
+        }
+
+        /* Hide the images by default */
+        .mySlides {
+            display: none;
+        }
+
+        /* Add a pointer when hovering over the thumbnail images */
+        .cursor {
+            cursor: pointer;
+        }
+
+        /* Next & previous buttons */
+        .prev,
+        .next {
+            cursor: pointer;
+            position: absolute;
+            top: 40%;
+            width: auto;
+            padding: 16px;
+            margin-top: -50px;
+            color: white;
+            font-weight: bold;
+            font-size: 20px;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+            -webkit-user-select: none;
+        }
+
+        /* Position the "next button" to the right */
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+
+        /* On hover, add a black background color with a little bit see-through */
+        .prev:hover,
+        .next:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        /* Number text (1/3 etc) */
+        .numbertext {
+            color: #222;
+            font-size: 12px;
+            padding: 8px 12px;
+            position: absolute;
+            top: 0;
+        }
+
+        /* Container for image text */
+        .caption-container {
+            text-align: center;
+            background-color: #222;
+            padding: 2px 16px;
+            color: white;
+        }
+
+        .row-row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /* Six columns side by side */
+        .column {
+            float: left;
+            width: 16%;
+        }
+
+        /* Add a transparency effect for thumnbail images */
+        .demo {
+            opacity: 0.6;
+        }
+
+        .active,
+        .demo:hover {
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+        <a class="navbar-brand" href="index.html"><img src="images/logo.png" alt="Website Logo"
+                style="width: 50px; height: 50px;"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"> <a class="nav-link" href="index.html">Home</a> </li>
+                <li class="nav-item"> <a class="nav-link" href="index.html">About</a> </li>
+                <li class="nav-item"> <a class="nav-link" href="#footer">Contact</a> </li>
+                <li class="nav-item"> <a class="nav-link" href="#tourism">Tourism</a> </li>
+            </ul>
+        </div>
+    </nav>
+    <section id="tourism-cordova">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h2>Tourism of Cordova, Cebu</h2>
+                    <p>Ang Cordova adunay maanindot nga lugar aron imong adtoan. Orb! ari na sa Cordova.
+                        Lukop sa dagat maong daghan ang kan-anan daplin niini. Adunay resort ug uban pa.
+                        Kini ang pipila sa mga labing maayo nga mga lugar nga pasyalan sa Cordova.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <hr class="tour">
+    <section id="tourism">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h2 style="text-align:center">10000 Roses Cafe & More Gallery</h2>
+                    <div class="slideshow-container" id="slideshow1">
+                        <div class="mySlides">
+                            <div class="numbertext">1 / 3</div>
+                            <img src="images/roses.jpg" style="width:100%">
+                        </div>
+                        <div class="mySlides">
+                            <div class="numbertext">2 / 3</div>
+                            <img src="images/roses1.jpg" style="width:100%">
+                        </div>
+                        <div class="mySlides">
+                            <div class="numbertext">3 / 3</div>
+                            <img src="images/roses2.jpg" style="width:100%">
+                        </div>
+                        <a class="prev" onclick="plusSlides(-1, 'slideshow1')">❮</a>
+                        <a class="next" onclick="plusSlides(1, 'slideshow1')">❯</a>
+
+                        <div class="caption-container">
+                            <p id="caption"></p>
+                        </div>
+
+                        <div class="row-row">
+                            <div class="column">
+                                <img class="demo cursor" src="images/roses.jpg" style="width:100%"
+                                    onclick="currentSlide(1)" alt="">
+                            </div>
+                            <div class="column">
+                                <img class="demo cursor" src="images/roses1.jpg" style="width:100%"
+                                    onclick="currentSlide(2)" alt="">
+                            </div>
+                            <div class="column">
+                                <img class="demo cursor" src="images/roses2.jpg" style="width:100%"
+                                    onclick="currentSlide(3)" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <h2>Kaanyag sa 10000 Roses Cafe & More</h2>
+                    <p>Orb! kung nangita kag nindot nga Cafe adtoa ang 10000 Roses Cafe and More, naa pay mga puti'ng
+                        rosas
+                        nga artipisyal nga grabi ang kaanyag samot na kon gabii ug daplin kini sa dagat.</p>
+                    <p>Klariks! bugnaw nga
+                        hangin imong mabati. Daghan og mga langyaw ang mangari kay lage tungod sa maanyag nga
+                        tanawonon.
+                        Balik ta kadtong bag-o pani giablihan, tsaaa! trapika! Ang dan gyud dina maagian hapit bisag
+                        tao.</p>
+                    <p>Orb! Maong kung nangita kag suroyanan Hada! pagdali na diha, bisitaha ang 10000 Roses Cafe &
+                        More.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <h2 style="text-align:center">Solea Mactan Resort Gallery</h2>
+                    <div class="slideshow-container" id="slideshow2">
+                        <div class="mySlides">
+                            <div class="numbertext">1 / 3</div>
+                            <img src="images/solea.jpg" style="width:100%">
+                        </div>
+                        <div class="mySlides">
+                            <div class="numbertext">2 / 3</div>
+                            <img src="images/solea1.jpg" style="width:100%">
+                        </div>
+                        <div class="mySlides">
+                            <div class="numbertext">3 / 3</div>
+                            <img src="images/solea2.jpg" style="width:100%">
+                        </div>
+                        <a class="prev" onclick="plusSlides(-1, 'slideshow2')">❮</a>
+                        <a class="next" onclick="plusSlides(1, 'slideshow2')">❯</a>
+
+                        <div class="caption-container">
+                            <p id="caption"></p>
+                        </div>
+
+                        <div class="row-row">
+                            <div class="column">
+                                <img class="demo cursor" src="images/solea.jpg" style="width:100%"
+                                    onclick="currentSlide(1)" alt="">
+                            </div>
+                            <div class="column">
+                                <img class="demo cursor" src="images/solea1.jpg" style="width:100%"
+                                    onclick="currentSlide(2)" alt="">
+                            </div>
+                            <div class="column">
+                                <img class="demo cursor" src="images/solea2.jpg" style="width:100%"
+                                    onclick="currentSlide(3)" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <h2>Pahuway na sa Solea Mactan Resort </h2>
+                    <p>Orb! Kon naghandom ka og luhoan ug mapahulay nga panagway gikan sa kagubot sa kinabuhi sa
+                        siyudad, ang
+                        Solea Resort sa Cordova maoy himuong dapit. Kini nga mataas nga resort nahimutang sa Barangay
+                        Alegria, Cordova, Cebu, ug nagtanyag og kalapad nga kagamitan ug serbisyo nga nag-atiman sa mga
+                        panginahanglan sa mga molupyo nga maglibang o negosyante.</p>
+                    <p>Ang mga bisita makalingaw sa nagkadaiyang mga aktibidad sa kasingkasing sama sa paglangoy sa
+                        outdoor nga pool, pag-ehersisyo sa fitness center, o pagdula og bilyar ug darts sa game room.
+                        Adunay spa ang resort nga nagtanyag og gilaingan ug mga masahe aron makatabang kanimo sa
+                        pagpahuway ug pagpalambo sa imong kaugalingon.</p>
+                    <p>Nya Orb!, kon nagpangita ka'g luhoan ug makalilisang nga pagpahuway dinhi sa Cebu, ang Solea
+                        Resort
+                        sa Cordova, siguradong maayo gayud nga himuon nga destinasyon.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <h2 style="text-align:center">Entoy's Bakasihan Gallery</h2>
+                    <div class="slideshow-container" id="slideshow3">
+                        <div class="mySlides">
+                            <div class="numbertext">1 / 3</div>
+                            <img src="images/entoy.jpg" style="width:100%">
+                        </div>
+                        <div class="mySlides">
+                            <div class="numbertext">2 / 3</div>
+                            <img src="images/entoy1.jpg" style="width:100%">
+                        </div>
+                        <div class="mySlides">
+                            <div class="numbertext">3 / 3</div>
+                            <img src="images/entoy2.jpg" style="width:100%">
+                        </div>
+                        <a class="prev" onclick="plusSlides(-1, 'slideshow3')">❮</a>
+                        <a class="next" onclick="plusSlides(1, 'slideshow3')">❯</a>
+
+                        <div class="caption-container">
+                            <p id="caption"></p>
+                        </div>
+
+                        <div class="row-row">
+                            <div class="column">
+                                <img class="demo cursor" src="images/entoy.jpg" style="width:100%"
+                                    onclick="currentSlide(1)" alt="">
+                            </div>
+                            <div class="column">
+                                <img class="demo cursor" src="images/entoy1.jpg" style="width:100%"
+                                    onclick="currentSlide(2)" alt="">
+                            </div>
+                            <div class="column">
+                                <img class="demo cursor" src="images/entoy2.jpg" style="width:100%"
+                                    onclick="currentSlide(3)" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <h2>Linarang nga Bakasi Sa Entoy's Bakasihan</h2>
+                    <p>Orb! Ikaw ba usa ka mahigugmaon sa seafood nga nanawagan og lain-laing kasinatian? Dili na
+                        kinahanglan pa'g magdungan sa Entoy’s Bakasihan sa Cordova, Cebu. Kini nga tinago nga bulawan
+                        mao'y usa
+                        ka kinahanglanon nga bisitahon alang sa bisan kinsa nga gustong magsinati og bag-ong ug
+                        makalibog
+                        nga kinaon.</p>
+                    <p>Ang Entoy’s Bakasihan usa ka gamay, dili kahibaw-an nga restawran nga nag-alok og pipila sa
+                        pinakapresko ug labing delisyosong seafood sa lugar. Ilahang espesyalidad mao ang Linarang
+                        Bakasi, usa ka asim-ang aslom nga sud-an nga gihimo gamit ang mga bakasi nga gi-sauté sa toyo,
+                        hilaw nga mangga, mga hinimo nga itom nga habas, ug gipakrema gamit ang sampalok ug uban pang
+                        tinago nga mga sangkap. Kini usa ka sayong giluto nga bakasi nga siguradong modagumdom sa imong
+                        panglawas.</p>
+                    <p>
+                        Hada! Ang Entoy’s Bakasihan bag-o pa lang gipakita sa Netflix nga Street Food Asia series, nga
+                        naka-tabang aron malili ang gikinahanglanon sa maong gipatago nga lugar. Pero ayaw kabalaka,
+                        usa gihapon kini ka relasyon nga dapit, busa dili ka maglisod og makakuha og lamesa nga walay
+                        kailog.
+                    </p>
+                    <p>Nya Orb! Busa kung nagapangita ka og ngilngig nga kasinatian sa kusina nga dili dayon malimtan,
+                        adto sa
+                        Entoy’s Bakasihan sa Cordova, Cebu. Dili ka magmahay!</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <h2 style="text-align:center">Parola Seaview Restaurant Gallery</h2>
+                    <div class="slideshow-container" id="slideshow4">
+                        <div class="mySlides">
+                            <div class="numbertext">1 / 5</div>
+                            <img src="images/parola.jpg" style="width:100%">
+                        </div>
+                        <div class="mySlides">
+                            <div class="numbertext">2 / 5</div>
+                            <img src="images/parola1.jpg" style="width:100%">
+                        </div>
+                        <div class="mySlides">
+                            <div class="numbertext">3 / 5</div>
+                            <img src="images/parola2.jpg" style="width:100%">
+                        </div>
+                        <div class="mySlides">
+                            <div class="numbertext">4 / 5</div>
+                            <img src="images/parola3.jpg" style="width:100%">
+                        </div>
+                        <div class="mySlides">
+                            <div class="numbertext">5 / 5</div>
+                            <img src="images/parola4.jpg" style="width:100%">
+                        </div>
+                        <a class="prev" onclick="plusSlides(-1, 'slideshow4')">❮</a>
+                        <a class="next" onclick="plusSlides(1, 'slideshow4')">❯</a>
+
+                        <div class="caption-container">
+                            <p id="caption"></p>
+                        </div>
+
+                        <div class="row-row">
+                            <div class="column">
+                                <img class="demo cursor" src="images/parola.jpg" style="width:100%"
+                                    onclick="currentSlide(1)" alt="">
+                            </div>
+                            <div class="column">
+                                <img class="demo cursor" src="images/parola1.jpg" style="width:100%"
+                                    onclick="currentSlide(2)" alt="">
+                            </div>
+                            <div class="column">
+                                <img class="demo cursor" src="images/parola2.jpg" style="width:100%"
+                                    onclick="currentSlide(3)" alt="">
+                            </div>
+                            <div class="column">
+                                <img class="demo cursor" src="images/parola3.jpg" style="width:100%"
+                                    onclick="currentSlide(4)" alt="">
+                            </div>
+                            <div class="column">
+                                <img class="demo cursor" src="images/parola4.jpg" style="width:100%"
+                                    onclick="currentSlide(5)" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <h2>Kalinawon ug Lami nga Pagkaon Sa Parola Seaview Restaurant</h2>
+                    <p>
+                        Orb! Nagapangita ba ka'g kalinaw, lami-lami nga pagkaon, ug usa ka makahilakbot nga
+                        tanawon sa kadagatan? Dili na kinahanglan'g magpangita pa, adto na sa Parola Seaview Restaurant
+                        sa Cordova, Cebu. Kini nga restaurant usa ka kinahanglanon nga bisitahon alang sa bisan kinsa
+                        nga gusto magdawat og lain-laing kasinatian sa pagkaon.</p>
+                    <p>Ang Parola Seaview Restaurant usa ka bag-ong bukas nga kalihokan sa Cordova nga nagtanyag og al
+                        fresco nga pagkaon sa tunga sa kadagatan. Ang paghiusa sa kalinawon nga pamati, lami-lami nga
+                        pagkaon, ug ang makahilakbot nga tanawon sa kadagatan naghatag og dili malimtan nga kasinatian
+                        sa pagkaon. Ang ilang menu puno og nagkalain-laing mga sud-anan nga siguradong magdagumdom sa
+                        imong panglawas. Gikan sa seafood ngadto sa karne, aduna silay hatagan alang sa tanan.</p>
+                    <p>
+                        Nya Orb!  kon nagapangita ka'g lain-laing kasinatian sa pagkaon nga dili dayon malimtan, adto sa
+                        Parola Seaview Restaurant sa Cordova, Cebu. Dili ka magmahay!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <br>
+    <footer class="footer" id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>Follow Us</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="https://www.facebook.com/charles.villena.18"><i class="fab fa-facebook-f"></i>
+                                Facebook</a></li>
+                        <li><a href="https://www.instagram.com/villena_charles_/"><i class="fab fa-twitter"></i>
+                                Twitter</a></li>
+                        <li><a href="https://twitter.com/VILLENACHARLES1"><i class="fab fa-instagram"></i> Instagram</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Contact</h5>
+                    <p>Email: villenacharles552@gmail.com</p>
+                    <p>Phone: +1234567890</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Address</h5>
+                    <p>Matab-ang Day-as</p>
+                    <p>Cordova, Cebu, Philippines</p>
+                    <!-- Embedded Map -->
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d981.5242851218419!2d123.94208559999998!3d10.253749000000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sph!4v1702544997818!5m2!1sen!2sph"
+                        width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <div class="col-md-12">
+                    <p>&copy; 2023 Charles. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script>
+        let slideIndex = 1;
+
+        function plusSlides(n, slideshowId) {
+            showSlides(slideIndex += n, slideshowId);
+        }
+
+        function currentSlide(n, slideshowId) {
+            showSlides(slideIndex = n, slideshowId);
+        }
+
+        function showSlides(n, slideshowId) {
+            let i;
+            let slides = document.getElementById(slideshowId).getElementsByClassName("mySlides");
+            let dots = document.getElementById(slideshowId).getElementsByClassName("demo");
+
+            if (n > slides.length) { slideIndex = 1; }
+            if (n < 1) { slideIndex = slides.length; }
+
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+        }
+
+        // Initialize the slideshow
+        showSlides(slideIndex, 'slideshow1');
+        showSlides(slideIndex, 'slideshow2');
+        showSlides(slideIndex, 'slideshow3'); // Fixed typo here
+        showSlides(slideIndex, 'slideshow4'); // Fixed typo here
+    </script>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+
+</html>
